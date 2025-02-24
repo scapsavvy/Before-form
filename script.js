@@ -1,4 +1,4 @@
-// Create file named 'script.js'
+
 const CONFIG = {
     originalPrice: 5000,
     razorpayKey: 'rzp_test_WhSEV2SfARdFbR', // Replace with your key
