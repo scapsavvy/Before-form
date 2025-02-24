@@ -1,8 +1,9 @@
 
+// script.js
 const CONFIG = {
     originalPrice: 5000,
-    razorpayKey: 'rzp_test_WhSEV2SfARdFbR', // Replace with your key
-    formURL: 'cap70.com/mynuv/',   // Replace with your form URL
+    razorpayKey: 'rzp_test_WhSEV2SfARdFbR', // Your Razorpay key here
+    formURL: 'https://cap70.com/mynuv/', // Your form URL
     promoCodes: {
         'NUV100': 100,  // 100% off
         'TEST50': 50,   // 50% off
@@ -26,8 +27,12 @@ function updatePriceDisplay() {
         
         if (currentPrice === 0) {
             proceedButton.textContent = 'Continue to Test (Free)';
+            proceedButton.onclick = function() {
+                window.location.href = CONFIG.formURL;
+            };
         } else {
             proceedButton.textContent = `Pay ₹${currentPrice} and Continue to Test`;
+            proceedButton.onclick = startPayment;
         }
     }
 }
@@ -74,6 +79,7 @@ function startPayment() {
         name: 'Test Registration',
         description: 'Test Access Fee',
         handler: function(response) {
+            // After successful payment, redirect to form
             window.location.href = CONFIG.formURL;
         }
     };
