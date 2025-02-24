@@ -1,0 +1,92 @@
+// Create file named 'styles.css'
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.title {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 2rem;
+}
+
+.price-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.original-price {
+    color: #64748b;
+    text-decoration: line-through;
+    font-size: 1.25rem;
+}
+
+.final-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #059669;
+    margin: 0.5rem 0;
+}
+
+.discount-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ecfdf5;
+    color: #059669;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.promo-section {
+    margin: 2rem 0;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.apply-btn {
+    background: #475569;
+    color: white;
+}
+
+.proceed-btn {
+    background: #2563eb;
+    color: white;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
