@@ -1,0 +1,35 @@
+// Create file named 'index.html'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Registration</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">Online Test Registration</h1>
+            
+            <div class="price-section">
+                <div class="original-price">₹<span id="originalPrice">5000</span></div>
+                <div class="final-price">₹<span id="finalPrice">5000</span></div>
+                <div id="discountBadge" class="discount-badge" style="display: none"></div>
+            </div>
+
+            <div class="promo-section">
+                <input type="text" id="promoCode" placeholder="Enter promo code">
+                <button onclick="applyPromoCode()" class="apply-btn">Apply Code</button>
+                <div id="promoMessage"></div>
+            </div>
+
+            <button onclick="startPayment()" class="proceed-btn" id="proceedButton">
+                Pay ₹5000 and Continue to Test
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
